@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 
 class ArFlutterPlugin {
   static const MethodChannel _channel =
+      // ignore: unnecessary_const
       const MethodChannel('ar_flutter_plugin');
 
   /// Private constructor to prevent accidental instantiation of the Plugin using the implicit default constructor

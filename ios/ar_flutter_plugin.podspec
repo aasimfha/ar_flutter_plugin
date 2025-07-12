@@ -18,13 +18,16 @@ A Flutter plugin for shared AR experiences supporting Android and iOS.
   s.dependency 'GLTFSceneKit'
   s.dependency 'SwiftJWT'
   s.static_framework = true
-  #s.dependency 'ARCore/CloudAnchors', '~> 1.12.0'
-  #s.dependency 'ARCore', '~> 1.2.0'
-  s.dependency 'ARCore/CloudAnchors', '~> 1.33.0' # Updated from 1.32 to 1.33 to support Apple Silicon, info here: https://github.com/google-ar/arcore-ios-sdk/issues/59#issuecomment-1219756010
+  
+  # Update ARCore/CloudAnchors to newer version that supports newer GTMSessionFetcher versions
+  s.dependency 'ARCore/CloudAnchors', '~> 1.49.0' 
+
   s.platform = :ios, '13.0'
+
 
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
 end
+

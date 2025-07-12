@@ -1,9 +1,14 @@
+
+// ignore_for_file: avoid_print
+
+// ignore: unused_import
 import 'dart:typed_data';
 
 import 'package:ar_flutter_plugin/models/ar_anchor.dart';
 import 'package:ar_flutter_plugin/models/ar_node.dart';
 import 'package:ar_flutter_plugin/utils/json_converters.dart';
 import 'package:flutter/services.dart';
+// ignore: unnecessary_import
 import 'package:vector_math/vector_math_64.dart';
 
 // Type definitions to enforce a consistent use of the API
@@ -109,7 +114,7 @@ class ARObjectManager {
           }
       }
     } catch (e) {
-      print('Error caught: ' + e.toString());
+      print('Error caught: $e');
     }
     return Future.value();
   }
@@ -136,7 +141,7 @@ class ARObjectManager {
       } else {
         return await _channel.invokeMethod<bool>('addNode', node.toMap());
       }
-    } on PlatformException catch (e) {
+    } on PlatformException {
       return false;
     }
   }

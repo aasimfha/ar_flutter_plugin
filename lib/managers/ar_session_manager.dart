@@ -1,4 +1,7 @@
+// ignore_for_file: unnecessary_null_comparison, avoid_print
+
 import 'dart:math' show sqrt;
+// ignore: unnecessary_import
 import 'dart:typed_data';
 
 import 'package:ar_flutter_plugin/datatypes/config_planedetection.dart';
@@ -45,7 +48,7 @@ class ARSessionManager {
           await _channel.invokeMethod<List<dynamic>>('getCameraPose', {});
       return MatrixConverter().fromJson(serializedCameraPose!);
     } catch (e) {
-      print('Error caught: ' + e.toString());
+      print('Error caught: $e');
       return null;
     }
   }
@@ -62,7 +65,7 @@ class ARSessionManager {
       });
       return MatrixConverter().fromJson(serializedCameraPose!);
     } catch (e) {
-      print('Error caught: ' + e.toString());
+      print('Error caught: $e');
       return null;
     }
   }
@@ -137,7 +140,7 @@ class ARSessionManager {
           }
       }
     } catch (e) {
-      print('Error caught: ' + e.toString());
+      print('Error caught: $e');
     }
     return Future.value();
   }

@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api, unnecessary_this, no_logic_in_create_state, avoid_print
+
 import 'package:ar_flutter_plugin/managers/ar_anchor_manager.dart';
 import 'package:ar_flutter_plugin/managers/ar_location_manager.dart';
 import 'package:flutter/material.dart';
@@ -142,6 +144,7 @@ class ARView extends StatefulWidget {
   /// Configures whether or not to display the device's platform type above the AR view. Defaults to false
   final bool showPlatformType;
 
+  // ignore: prefer_const_constructors_in_immutables
   ARView(
       {Key? key,
       required this.onARViewCreated,

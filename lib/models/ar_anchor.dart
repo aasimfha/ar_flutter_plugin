@@ -1,6 +1,8 @@
 import 'package:ar_flutter_plugin/datatypes/anchor_types.dart';
+// ignore: unused_import
 import 'package:ar_flutter_plugin/models/ar_node.dart';
 import 'package:ar_flutter_plugin/utils/json_converters.dart';
+// ignore: unnecessary_import
 import 'package:vector_math/vector_math_64.dart';
 import 'package:flutter/widgets.dart';
 
@@ -45,6 +47,7 @@ class ARPlaneAnchor extends ARAnchor {
     String? cloudanchorid,
     int? ttl,
   })  : childNodes = childNodes ?? [],
+        // ignore: unnecessary_null_in_if_null_operators
         cloudanchorid = cloudanchorid ?? null,
         ttl = ttl ?? 1,
         super(

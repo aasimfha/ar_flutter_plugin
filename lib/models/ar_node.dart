@@ -24,6 +24,7 @@ class ARNode {
   })  : name = name ?? UniqueKey().toString(),
         transformNotifier = ValueNotifier(createTransformMatrix(
             transformation, position, scale, rotation, eulerAngles)),
+        // ignore: unnecessary_null_in_if_null_operators
         data = data ?? null;
 
   /// Specifies the receiver's [NodeType]
